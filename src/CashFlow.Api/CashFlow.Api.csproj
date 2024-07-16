@@ -27,4 +27,8 @@
       <Compile Remove="WeatherForecast.cs" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="CashFlow.Api.http" />
+    </ItemGroup>
+
 </Project>
