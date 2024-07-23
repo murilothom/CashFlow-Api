@@ -7,7 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Compile Remove="Class1.cs" />
       <Compile Update="ResourceErrorMessages.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>

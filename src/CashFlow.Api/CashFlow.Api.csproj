@@ -22,13 +22,4 @@
       <Folder Include="Controllers\" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Compile Remove="Controllers\WeatherForecastController.cs" />
-      <Compile Remove="WeatherForecast.cs" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <None Remove="CashFlow.Api.http" />
-    </ItemGroup>
-
 </Project>
