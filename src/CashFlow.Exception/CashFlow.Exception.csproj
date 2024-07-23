@@ -13,12 +13,39 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>ResourceErrorMessages.resx</DependentUpon>
       </Compile>
+      <Compile Update="ResourceErrorMessages.pt-BR.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ResourceErrorMessages.pt-BR.resx</DependentUpon>
+      </Compile>
+      <Compile Update="ResourceErrorMessages.fr.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ResourceErrorMessages.fr.resx</DependentUpon>
+      </Compile>
+      <Compile Update="ResourceErrorMessages.de.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ResourceErrorMessages.de.resx</DependentUpon>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>
       <EmbeddedResource Update="ResourceErrorMessages.resx">
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>ResourceErrorMessages.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="ResourceErrorMessages.pt-BR.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>ResourceErrorMessages.pt-BR.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="ResourceErrorMessages.fr.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>ResourceErrorMessages.fr-FR.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="ResourceErrorMessages.de.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>ResourceErrorMessages.de.Designer.cs</LastGenOutput>
       </EmbeddedResource>
     </ItemGroup>
 
