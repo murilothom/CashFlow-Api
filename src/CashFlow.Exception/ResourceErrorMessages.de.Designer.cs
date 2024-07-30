@@ -78,6 +78,15 @@ namespace CashFlow.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ausgabe nicht gefunden..
+        /// </summary>
+        internal static string EXPENSE_NOT_FOUND {
+            get {
+                return ResourceManager.GetString("EXPENSE_NOT_FOUND", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Zahlungsart ist ungültig..
         /// </summary>
         internal static string INVALID_PAYMENT_TYPE {

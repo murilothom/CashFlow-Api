@@ -33,4 +33,7 @@
     <data name="UNKNOWN_ERROR" xml:space="preserve">
         <value>Unbekannter Fehler.</value>
     </data>
+    <data name="EXPENSE_NOT_FOUND" xml:space="preserve">
+        <value>Ausgabe nicht gefunden.</value>
+    </data>
 </root>

@@ -50,7 +50,7 @@ namespace CashFlow.Exception {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -74,6 +74,15 @@ namespace CashFlow.Exception {
         public static string EXPANSE_CANNOT_BE_IN_THE_FUTURE {
             get {
                 return ResourceManager.GetString("EXPANSE_CANNOT_BE_IN_THE_FUTURE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Expense not found..
+        /// </summary>
+        public static string EXPENSE_NOT_FOUND {
+            get {
+                return ResourceManager.GetString("EXPENSE_NOT_FOUND", resourceCulture);
             }
         }
         
