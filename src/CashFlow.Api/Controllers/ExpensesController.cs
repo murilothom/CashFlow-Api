@@ -1,5 +1,6 @@
 using CashFlow.Application.UseCases.Expenses.Register;
 using CashFlow.Communication.Requests;
+using CashFlow.Communication.Responses;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CashFlow.Api.Controllers
@@ -9,6 +10,8 @@ namespace CashFlow.Api.Controllers
     public class ExpensesController : ControllerBase
     {
         [HttpPost]
+        [ProducesResponseType(typeof(ResponseRegisterExpenseDto), StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(ResponseErrorDto), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Register(
             [FromServices] RegisterExpenseUseCase useCase,
             [FromBody] RequestRegisterExpenseDto request)
