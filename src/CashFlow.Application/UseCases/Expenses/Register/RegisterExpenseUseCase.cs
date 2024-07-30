@@ -19,7 +19,7 @@ public class RegisterExpenseUseCase : IRegisterExpenseUseCase
         _unitOfWork = unitOfWork;
     }
 
-    public ResponseRegisterExpenseDto Execute(RequestRegisterExpenseDto request)
+    public async Task<ResponseRegisterExpenseDto> Execute(RequestRegisterExpenseDto request)
     {
         Validate(request);
 
@@ -32,9 +32,9 @@ public class RegisterExpenseUseCase : IRegisterExpenseUseCase
             PaymentType = (PaymentType)request.PaymentType
         };
         
-        _repository.Add(entity);
+        await _repository.Add(entity);
 
-        _unitOfWork.Commit();
+        await _unitOfWork.Commit();
 
         return new ResponseRegisterExpenseDto
         {
