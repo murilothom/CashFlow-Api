@@ -1,37 +1,39 @@
 ﻿using AutoMapper;
 using CashFlow.Communication.Requests;
-using CashFlow.Communication.Responses;
 using CashFlow.Domain.Entities;
 using CashFlow.Domain.Repositories;
 using CashFlow.Domain.Repositories.Expenses;
+using CashFlow.Exception;
 using CashFlow.Exception.ExceptionsBase;
 
-namespace CashFlow.Application.UseCases.Expenses.Register;
+namespace CashFlow.Application.UseCases.Expenses.UpdateById;
 
-public class RegisterExpenseUseCase : IRegisterExpenseUseCase
+public class UpdateExpenseByIdUseCase : IUpdateExpenseByIdUseCase
 {
     private readonly IExpensesRepository _repository;
     private readonly IMapper _mapper;
-
-    public RegisterExpenseUseCase(
-        IExpensesRepository repository, 
+    
+    public UpdateExpenseByIdUseCase(
+        IExpensesRepository repository,
         IMapper mapper)
     {
         _repository = repository;
         _mapper = mapper;
     }
-
-    public async Task<ResponseRegisterExpenseDto> Execute(RegisterExpenseDto request)
+    public async Task Execute(long id, RegisterExpenseDto request)
     {
         Validate(request);
-
-        var entity = _mapper.Map<Expense>(request);
         
-        await _repository.Add(entity);
+        var expense = await _repository.GetById(id);
 
-        var response = _mapper.Map<ResponseRegisterExpenseDto>(entity);
+        if (expense is null)
+        {
+            throw new NotFoundException(ResourceErrorMessages.EXPENSE_NOT_FOUND);
+        }
 
-        return response;
+        var updatedExpenseEntity = _mapper.Map(request, expense);
+        
+        await _repository.UpdateById(id, updatedExpenseEntity);
     }
 
     private void Validate(RegisterExpenseDto request)

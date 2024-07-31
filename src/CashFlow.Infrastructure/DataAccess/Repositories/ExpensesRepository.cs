@@ -14,6 +14,7 @@ internal class ExpensesRepository : IExpensesRepository
     public async Task Add(Expense expense)
     {
         await _dbContext.Expenses.AddAsync(expense);
+        await _dbContext.SaveChangesAsync();
     }
 
     public async Task<List<Expense>> GetAll()
@@ -32,10 +33,23 @@ internal class ExpensesRepository : IExpensesRepository
         return response;
     }
 
+    public async Task UpdateById(long id, Expense expense)
+    {
+        var dbExpense = await _dbContext.Expenses.FindAsync(id);
+        if (dbExpense is not null)
+        {
+            _dbContext.Entry(dbExpense).CurrentValues.SetValues(expense);
+            await _dbContext.SaveChangesAsync();
+        }
+    }
+
     public async Task DeleteById(long id)
     {
-        await _dbContext.Expenses
-            .Where(expense => expense.Id.Equals(id))
-            .ExecuteDeleteAsync();
+        var dbExpense = await _dbContext.Expenses.FindAsync(id);
+        if (dbExpense is not null)
+        {
+            _dbContext.Expenses.Remove(dbExpense);
+            await _dbContext.SaveChangesAsync();
+        }
     }
 }
