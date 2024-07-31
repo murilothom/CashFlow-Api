@@ -31,4 +31,11 @@ internal class ExpensesRepository : IExpensesRepository
             .FirstOrDefaultAsync(expense => expense.Id.Equals(id));
         return response;
     }
+
+    public async Task DeleteById(long id)
+    {
+        await _dbContext.Expenses
+            .Where(expense => expense.Id.Equals(id))
+            .ExecuteDeleteAsync();
+    }
 }
