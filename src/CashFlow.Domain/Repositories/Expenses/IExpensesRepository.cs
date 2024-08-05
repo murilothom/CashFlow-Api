@@ -9,4 +9,5 @@ public interface IExpensesRepository
     Task<Expense?> GetById(long id);
     Task UpdateById(long id, Expense expense);
     Task DeleteById(long id);
+    Task<List<Expense>> FilterByMonth(DateOnly date);
 }

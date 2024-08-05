@@ -1,4 +1,5 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=19A6708E_002D9781_002D432F_002DA5D9_002DE54C14D87348_002Fd_003AControllers_002Ff_003AReportController_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
   &lt;Assembly Path="C:\Users\Murilo\.nuget\packages\fluentassertions\6.12.0\lib\net6.0\FluentAssertions.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
@@ -7,6 +8,7 @@
     &lt;TestId&gt;xUnit::26BEC858-9E93-489F-9AFB-E22FC3C7C48A::net8.0::Validators.Test.Expenses.Register.RegisterExpenseValidatorTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=src_002FCashFlow_002EDomain_002FReports_002FResourceReportGenerationMessage/@EntryIndexedValue">True</s:Boolean>
 	
 	
 	
