@@ -1,4 +1,5 @@
 ﻿using CashFlow.Domain.Enums;
+using CashFlow.Domain.Extensions;
 using CashFlow.Domain.Reports;
 using CashFlow.Domain.Repositories.Expenses;
 using ClosedXML.Excel;
@@ -7,7 +8,7 @@ namespace CashFlow.Application.UseCases.Expenses.Reports.Excel;
 
 public class GenerateExpensesReportExcelUseCase : IGenerateExpensesReportExcelUseCase
 {
-    private const string CURRENCY_SYMBOL = "R$";
+    private const string CURRENCY_SYMBOL = "$";
     private readonly IExpensesRepository _repository;
 
     public GenerateExpensesReportExcelUseCase(IExpensesRepository repository)
@@ -33,7 +34,7 @@ public class GenerateExpensesReportExcelUseCase : IGenerateExpensesReportExcelUs
         {
             worksheet.Cell($"A{raw}").Value = expense.Title;
             worksheet.Cell($"B{raw}").Value = expense.Date;
-            worksheet.Cell($"C{raw}").Value = ConvertPaymentType(expense.PaymentType);
+            worksheet.Cell($"C{raw}").Value = expense.PaymentType.PaymentTypeToString();
             
             worksheet.Cell($"D{raw}").Value = expense.Amount;
             worksheet.Cell($"D{raw}").Style.NumberFormat.Format = $"- {CURRENCY_SYMBOL} #,##0.00";
@@ -68,17 +69,5 @@ public class GenerateExpensesReportExcelUseCase : IGenerateExpensesReportExcelUs
         worksheet.Cell("C1").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
         worksheet.Cell("D1").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Right);
         worksheet.Cell("E1").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
-    }
-
-    private string ConvertPaymentType(PaymentType paymentType)
-    {
-        return paymentType switch
-        {
-            PaymentType.Cash => ResourceReportGenerationMessage.CASH,
-            PaymentType.CreditCard => ResourceReportGenerationMessage.CREDIT_CARD,
-            PaymentType.DebitCard => ResourceReportGenerationMessage.DEBIT_CARD,
-            PaymentType.ElectronicTransfer => ResourceReportGenerationMessage.ELECTRONIC_TRANSFER,
-            _ => string.Empty
-        };
     }
 }

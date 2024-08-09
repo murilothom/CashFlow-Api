@@ -45,4 +45,10 @@
     <data name="ELECTRONIC_TRANSFER" xml:space="preserve">
         <value>Elektronische Überweisung</value>
     </data>
+    <data name="EXPENSES_FOR" xml:space="preserve">
+        <value>Ausgaben für</value>
+    </data>
+    <data name="TOTAL_SPENT_IN" xml:space="preserve">
+        <value>Gesamtausgaben in {0}</value>
+    </data>
 </root>

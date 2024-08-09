@@ -123,6 +123,15 @@ namespace CashFlow.Domain.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dépenses pour.
+        /// </summary>
+        internal static string EXPENSES_FOR {
+            get {
+                return ResourceManager.GetString("EXPENSES_FOR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Type de paiement.
         /// </summary>
         internal static string PAYMENT_TYPE {
@@ -137,6 +146,15 @@ namespace CashFlow.Domain.Reports {
         internal static string TITLE {
             get {
                 return ResourceManager.GetString("TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total dépensé en {0}.
+        /// </summary>
+        internal static string TOTAL_SPENT_IN {
+            get {
+                return ResourceManager.GetString("TOTAL_SPENT_IN", resourceCulture);
             }
         }
     }

@@ -1,5 +1,6 @@
 using System.Net.Mime;
 using CashFlow.Application.UseCases.Expenses.Reports.Excel;
+using CashFlow.Application.UseCases.Expenses.Reports.Pdf;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CashFlow.Api.Controllers
@@ -12,11 +13,22 @@ namespace CashFlow.Api.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)] 
         public async Task<IActionResult> GetExcel(
             [FromServices] IGenerateExpensesReportExcelUseCase useCase,
-            [FromHeader] DateOnly month)
+            [FromQuery] DateOnly month)
         {
             var file = await useCase.Execute(month);
 
             return File(file, MediaTypeNames.Application.Octet, "report.xlsx");
+        }
+        
+        [HttpGet("pdf")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetExcel(
+            [FromServices] IGenerateExpensesReportPdfUseCase useCase,
+            [FromQuery] DateOnly month)
+        {
+            var file = await useCase.Execute(month);
+
+            return File(file, MediaTypeNames.Application.Pdf, "report.pdf");
         }
     }
 }
