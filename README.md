@@ -10,3 +10,21 @@ Dentre os pacotes **NuGet** utilizados, o **AutoMapper** é o responsável pelo 
 testes de unidade para tornar as verificações mais legíveis, ajudando a escrever testes claros e compreensíveis. Para as validações, o **FluentValidation** é usado para implementar regras de validação de forma simples e intuitiva
 nas classes de requisições, mantendo o código limpo e fácil de manter. Por fim, o **EntityFramework** atua como um **ORM (Object-Relational Mapper)** que simplifica as interações com o banco de dados, permitindo o uso de
 objetos .NET para manipular dados diretamente, sem a necessidade de lidar com consultas SQL.
+
+## Getting Started
+
+Para obter uma cópia local funcionando, siga estes passos.
+
+### Requisitos
+
+* <a href="https://dotnet.microsoft.com/pt-br/download" target="_blank">.NET SDK</a>
+* <a href="https://dev.mysql.com/downloads/mysql/" target="_blank">MySQL Server</a>
+
+### Instalação
+
+1. Faça o clone do repositório:
+ ```sh
+  git clone https://github.com/murilothom/CashFlow-Api.git
+ ```   
+2. Ajuste o arquivo `appsetings.Development.json`
+3. Faça a execução do App
