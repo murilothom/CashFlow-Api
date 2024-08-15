@@ -42,12 +42,11 @@ public class UpdateExpenseByIdUseCase : IUpdateExpenseByIdUseCase
 
         var result = validator.Validate(request);
 
-        if (result.IsValid)
+        if (result.IsValid == false)
         {
-            return;
-        }
-        var errorMessages = result.Errors.Select(f => f.ErrorMessage).ToList();
+            var errorMessages = result.Errors.Select(f => f.ErrorMessage).ToList();
 
-        throw new ErrorOnValidationException(errorMessages);
+            throw new ErrorOnValidationException(errorMessages);
+        }
     }
 }

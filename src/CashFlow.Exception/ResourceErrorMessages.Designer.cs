@@ -28,14 +28,14 @@ namespace CashFlow.Exception {
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal ResourceErrorMessages() {
+        public ResourceErrorMessages() {
         }
         
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CashFlow.Exception.ResourceErrorMessages", typeof(ResourceErrorMessages).Assembly);
@@ -69,6 +69,33 @@ namespace CashFlow.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to User with this email already exists..
+        /// </summary>
+        public static string EMAIL_IN_USE {
+            get {
+                return ResourceManager.GetString("EMAIL_IN_USE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The email is required..
+        /// </summary>
+        public static string EMPTY_EMAIL {
+            get {
+                return ResourceManager.GetString("EMPTY_EMAIL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The name is required..
+        /// </summary>
+        public static string EMPTY_NAME {
+            get {
+                return ResourceManager.GetString("EMPTY_NAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Expense date cannot be in the future..
         /// </summary>
         public static string EXPANSE_CANNOT_BE_IN_THE_FUTURE {
@@ -83,6 +110,24 @@ namespace CashFlow.Exception {
         public static string EXPENSE_NOT_FOUND {
             get {
                 return ResourceManager.GetString("EXPENSE_NOT_FOUND", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E-mail is not valid..
+        /// </summary>
+        public static string INVALID_EMAIL {
+            get {
+                return ResourceManager.GetString("INVALID_EMAIL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The password must contain at least 8 characters, with an uppercase letter, a lowercase letter, a number and a special character (for example: &quot;!, ?, *, .&quot;).
+        /// </summary>
+        public static string INVALID_PASSWORD {
+            get {
+                return ResourceManager.GetString("INVALID_PASSWORD", resourceCulture);
             }
         }
         

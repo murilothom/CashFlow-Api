@@ -69,6 +69,33 @@ namespace CashFlow.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Benutzer mit dieser E-Mail existiert bereits..
+        /// </summary>
+        internal static string EMAIL_IN_USE {
+            get {
+                return ResourceManager.GetString("EMAIL_IN_USE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Die E-Mail ist erforderlich..
+        /// </summary>
+        internal static string EMPTY_EMAIL {
+            get {
+                return ResourceManager.GetString("EMPTY_EMAIL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Der Name ist obligatorisch..
+        /// </summary>
+        internal static string EMPTY_NAME {
+            get {
+                return ResourceManager.GetString("EMPTY_NAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Das Ausgabedatum darf nicht in der Zukunft liegen..
         /// </summary>
         internal static string EXPANSE_CANNOT_BE_IN_THE_FUTURE {
@@ -83,6 +110,24 @@ namespace CashFlow.Exception {
         internal static string EXPENSE_NOT_FOUND {
             get {
                 return ResourceManager.GetString("EXPENSE_NOT_FOUND", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E-Mail ist ungültig..
+        /// </summary>
+        internal static string INVALID_EMAIL {
+            get {
+                return ResourceManager.GetString("INVALID_EMAIL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Das Passwort muss mindestens 8 Zeichen enthalten, darunter einen Großbuchstaben, einen Kleinbuchstaben, eine Zahl und ein Sonderzeichen (zum Beispiel: „!, ?, *, .“).
+        /// </summary>
+        internal static string INVALID_PASSWORD {
+            get {
+                return ResourceManager.GetString("INVALID_PASSWORD", resourceCulture);
             }
         }
         

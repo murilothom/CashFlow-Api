@@ -36,4 +36,19 @@
     <data name="EXPENSE_NOT_FOUND" xml:space="preserve">
         <value>Despesa não encontrada.</value>
     </data>
+    <data name="INVALID_EMAIL" xml:space="preserve">
+        <value>E-mail não é válido.</value>
+    </data>
+    <data name="EMPTY_NAME" xml:space="preserve">
+        <value>O nome é obrigatório.</value>
+    </data>
+    <data name="EMPTY_EMAIL" xml:space="preserve">
+        <value>O e-mail é obrigatório.</value>
+    </data>
+    <data name="INVALID_PASSWORD" xml:space="preserve">
+        <value>A senha deve conter no mínimo 8 caracteres, tendo uma letra maiúscula, uma letra minúscula, um número e um caractere especial (por exemplo: "!, ?, *, .")</value>
+    </data>
+    <data name="EMAIL_IN_USE" xml:space="preserve">
+        <value>Já existe um usuário com este endereço de e-mail.</value>
+    </data>
 </root>
