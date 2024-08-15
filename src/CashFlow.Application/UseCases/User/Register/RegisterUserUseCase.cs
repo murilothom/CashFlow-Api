@@ -2,7 +2,8 @@ using AutoMapper;
 using CashFlow.Communication.Requests;
 using CashFlow.Communication.Responses;
 using CashFlow.Domain.Repositories.Users;
-using CashFlow.Domain.Security;
+using CashFlow.Domain.Security.Cryptography;
+using CashFlow.Domain.Security.Tokens;
 using CashFlow.Exception;
 using CashFlow.Exception.ExceptionsBase;
 
@@ -13,15 +14,18 @@ public class RegisterUserUseCase : IRegisterUserUseCase
     private readonly IUsersRepository _repository;
     private readonly IMapper _mapper;
     private readonly IPasswordEncripter _passwordEncripter;
+    private readonly IAccessTokenGenerator _tokenGenerator;
     
     public RegisterUserUseCase(
         IUsersRepository repository,
         IMapper mapper,
-        IPasswordEncripter passwordEncripter)
+        IPasswordEncripter passwordEncripter,
+        IAccessTokenGenerator tokenGenerator)
     {
         _repository = repository;
         _mapper = mapper;
         _passwordEncripter = passwordEncripter;
+        _tokenGenerator = tokenGenerator;
     }
     public async Task<ResponseRegisterUserDto> Execute(RequestRegisterUserDto request)
     {
@@ -31,10 +35,13 @@ public class RegisterUserUseCase : IRegisterUserUseCase
         user.Password = _passwordEncripter.Encrypt(request.Password);
 
         await _repository.Add(user);
+        
+        var accessToken = _tokenGenerator.Generate(user);
 
         return new ResponseRegisterUserDto
         {
             Name = user.Name,
+            Token = accessToken,
         };
     }
 

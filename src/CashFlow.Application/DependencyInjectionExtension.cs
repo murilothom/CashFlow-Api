@@ -7,7 +7,6 @@ using CashFlow.Application.UseCases.Expenses.Reports.Excel;
 using CashFlow.Application.UseCases.Expenses.Reports.Pdf;
 using CashFlow.Application.UseCases.Expenses.UpdateById;
 using CashFlow.Application.UseCases.User.Register;
-using CashFlow.Domain.Security;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CashFlow.Application;
@@ -18,8 +17,6 @@ public static class DependencyInjectionExtension
     {
         AddUseCases(services);
         AddAutoMapper(services);
-
-        services.AddScoped<IPasswordEncripter, Infrastructure.Security.BCrypt>();
     }
 
     private static void AddAutoMapper(IServiceCollection services)
