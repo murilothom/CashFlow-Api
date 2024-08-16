@@ -141,6 +141,15 @@ namespace CashFlow.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to E-Mail oder Passwort falsch..
+        /// </summary>
+        internal static string LOGIN_FAILED {
+            get {
+                return ResourceManager.GetString("LOGIN_FAILED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Der Titel ist erforderlich..
         /// </summary>
         internal static string TITLE_REQUIRED {

@@ -51,4 +51,7 @@
     <data name="EMAIL_IN_USE" xml:space="preserve">
         <value>Já existe um usuário com este endereço de e-mail.</value>
     </data>
+    <data name="LOGIN_FAILED" xml:space="preserve">
+        <value>E-mail ou senha incorretos.</value>
+    </data>
 </root>

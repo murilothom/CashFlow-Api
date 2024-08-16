@@ -19,7 +19,7 @@ internal class UsersRepository : IUsersRepository
         await _dbContext.SaveChangesAsync();
     }
 
-    public async Task<User?> findByEmail(string email)
+    public async Task<User?> getByEmail(string email)
     {
         var user = await _dbContext.Users
             .AsNoTracking()
