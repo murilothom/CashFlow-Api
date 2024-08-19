@@ -25,14 +25,14 @@ public static class DependencyInjectionExtension
     private static void AddToken(IServiceCollection services, IConfiguration configuration)
     {
         var expirationTimeInMinutes = configuration.GetValue<uint>("Settings:Jwt:ExpiresInMinutes");
-        var signInKey = configuration.GetValue<string>("Settings:Jwt:SignInKey");
+        var signinKey = configuration.GetValue<string>("Settings:Jwt:SigninKey");
 
-        if (string.IsNullOrEmpty(signInKey))
+        if (string.IsNullOrEmpty(signinKey))
         {
-            throw new InvalidOperationException("Invalid signInKey.");
+            throw new InvalidOperationException("Invalid signinKey.");
         }
 
-        services.AddScoped<IAccessTokenGenerator>(serviceProvider => new JwtTokenGenerator(expirationTimeInMinutes, signInKey));
+        services.AddScoped<IAccessTokenGenerator>(serviceProvider => new JwtTokenGenerator(expirationTimeInMinutes, signinKey));
     }
 
     private static void AddRepositories(IServiceCollection services)

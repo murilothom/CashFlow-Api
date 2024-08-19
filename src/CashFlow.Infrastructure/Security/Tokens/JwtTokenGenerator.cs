@@ -10,12 +10,12 @@ namespace CashFlow.Infrastructure.Security.Tokens;
 public class JwtTokenGenerator : IAccessTokenGenerator
 {
     private readonly uint _expirationTimeInMinutes;
-    private readonly string _signInKey;
+    private readonly string _signinKey;
 
-    public JwtTokenGenerator(uint expirationTimeInMinutes, string signInKey)
+    public JwtTokenGenerator(uint expirationTimeInMinutes, string signinKey)
     {
         _expirationTimeInMinutes = expirationTimeInMinutes;
-        _signInKey = signInKey;
+        _signinKey = signinKey;
     }
 
     public string Generate(User user)
@@ -44,7 +44,7 @@ public class JwtTokenGenerator : IAccessTokenGenerator
 
     private SymmetricSecurityKey SecurityKey()
     {
-        var key = Encoding.UTF8.GetBytes(_signInKey);
+        var key = Encoding.UTF8.GetBytes(_signinKey);
         
         return new SymmetricSecurityKey(key);
     }
