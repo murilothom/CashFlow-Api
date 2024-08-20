@@ -9,7 +9,7 @@ namespace Validators.Test.Expenses.Register;
 public class ExpenseValidatorTest
 {
     [Fact]
-    public void Success_Register()
+    public void Success()
     {
         // Arrange
         var validator = new ExpenseValidator();
@@ -26,7 +26,7 @@ public class ExpenseValidatorTest
     [InlineData("")]
     [InlineData(null)]
     [InlineData("  ")]
-    public void Error_Title_Empty(string title)
+    public void Error_Invalid_Title(string title)
     {
         // Arrange
         var validator = new ExpenseValidator();

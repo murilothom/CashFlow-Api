@@ -9,10 +9,10 @@ public class RequestRegisterExpenseDtoBuilder
     public static RegisterExpenseDto Build()
     {
         return new Faker<RegisterExpenseDto>()
-            .RuleFor(r => r.Title, f => f.Commerce.ProductName())
-            .RuleFor(r => r.Description, f => f.Commerce.ProductDescription())
-            .RuleFor(r => r.Amount, f => f.Random.Decimal(min: 1, max: 1000))
-            .RuleFor(r => r.Date, f => f.Date.Past())
-            .RuleFor(r => r.PaymentType, f => f.PickRandom<PaymentType>());
+            .RuleFor(expense => expense.Title, faker => faker.Commerce.ProductName())
+            .RuleFor(expense => expense.Description, faker => faker.Commerce.ProductDescription())
+            .RuleFor(expense => expense.Amount, faker => faker.Random.Decimal(min: 1, max: 1000))
+            .RuleFor(expense => expense.Date, faker => faker.Date.Past())
+            .RuleFor(expense => expense.PaymentType, faker => faker.PickRandom<PaymentType>());
     }
 }

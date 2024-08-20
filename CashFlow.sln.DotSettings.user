@@ -5,7 +5,14 @@
 &lt;/AssemblyExplorer&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a37224c2_002D2eca_002D4932_002Dbdd6_002D4fe41464f060/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="RegisterExpenseValidatorTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::26BEC858-9E93-489F-9AFB-E22FC3C7C48A::net8.0::Validators.Test.Expenses.Register.RegisterExpenseValidatorTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::26BEC858-9E93-489F-9AFB-E22FC3C7C48A::net8.0::Validators.Test.Expenses.Register.ExpenseValidatorTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::26BEC858-9E93-489F-9AFB-E22FC3C7C48A::net8.0::Validators.Test.Users.Register.RegisterUserValidatorTest.Success&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::26BEC858-9E93-489F-9AFB-E22FC3C7C48A::net8.0::Validators.Test.Users.Register.RegisterUserValidatorTest.Error_Name_Empty&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::26BEC858-9E93-489F-9AFB-E22FC3C7C48A::net8.0::Validators.Test.Users.Register.RegisterUserValidatorTest.Error_Invalid_Email&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::26BEC858-9E93-489F-9AFB-E22FC3C7C48A::net8.0::Validators.Test.Users.Register.RegisterUserValidatorTest.Error_Empty_Email&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::26BEC858-9E93-489F-9AFB-E22FC3C7C48A::net8.0::Validators.Test.Users.Register.RegisterUserValidatorTest.Error_Empty_Password&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::26BEC858-9E93-489F-9AFB-E22FC3C7C48A::net8.0::Validators.Test.Users.PasswordValidatorTest.Error_Invalid_Name&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::26BEC858-9E93-489F-9AFB-E22FC3C7C48A::net8.0::Validators.Test.Users.PasswordValidatorTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=src_002FCashFlow_002EDomain_002FReports_002FResourceReportGenerationMessage/@EntryIndexedValue">True</s:Boolean>
