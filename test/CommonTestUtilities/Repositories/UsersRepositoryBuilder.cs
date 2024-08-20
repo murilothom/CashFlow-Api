@@ -20,12 +20,12 @@ public class UsersRepositoryBuilder
         {
             Id = Guid.NewGuid(),
             Email = email,
-            Name = "User Existente",
+            Name = "Existent User",
             Password = "encrypted_password",
             Role = Role.TEAM_MEMBER
         };
         
-        _repository.Setup(repo => repo.GetByEmail(email)).ReturnsAsync(user);
+        _repository.Setup(repo => repo.GetByEmail("existent@email.com")).ReturnsAsync(user);
     }
 
     public IUsersRepository Build() => _repository.Object;

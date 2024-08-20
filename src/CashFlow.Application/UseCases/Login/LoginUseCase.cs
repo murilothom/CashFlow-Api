@@ -11,16 +11,16 @@ namespace CashFlow.Application.UseCases.Login;
 public class LoginUseCase : ILoginUseCase
 {
     private readonly IUsersRepository _repository;
-    private readonly IPasswordEncripter _passwordEncripter;
+    private readonly IPasswordEncrypter _passwordEncrypter;
     private readonly IAccessTokenGenerator _tokenGenerator;
 
     public LoginUseCase(
         IUsersRepository repository,
-        IPasswordEncripter passwordEncripterEncripter,
+        IPasswordEncrypter passwordEncrypterEncrypter,
         IAccessTokenGenerator tokenGenerator)
     {
         _repository = repository;
-        _passwordEncripter = passwordEncripterEncripter;
+        _passwordEncrypter = passwordEncrypterEncrypter;
         _tokenGenerator = tokenGenerator;
     }
 
@@ -32,7 +32,7 @@ public class LoginUseCase : ILoginUseCase
             throw new UnauthorizedException(ResourceErrorMessages.LOGIN_FAILED);
         }
         
-        var isPasswordValid = _passwordEncripter.Verify(request.Password, user.Password);
+        var isPasswordValid = _passwordEncrypter.Verify(request.Password, user.Password);
         if (isPasswordValid == false)
         {
             throw new UnauthorizedException(ResourceErrorMessages.LOGIN_FAILED);

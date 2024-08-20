@@ -13,18 +13,18 @@ public class RegisterUserUseCase : IRegisterUserUseCase
 {
     private readonly IUsersRepository _repository;
     private readonly IMapper _mapper;
-    private readonly IPasswordEncripter _passwordEncripter;
+    private readonly IPasswordEncrypter _passwordEncrypter;
     private readonly IAccessTokenGenerator _tokenGenerator;
     
     public RegisterUserUseCase(
         IUsersRepository repository,
         IMapper mapper,
-        IPasswordEncripter passwordEncripter,
+        IPasswordEncrypter passwordEncrypter,
         IAccessTokenGenerator tokenGenerator)
     {
         _repository = repository;
         _mapper = mapper;
-        _passwordEncripter = passwordEncripter;
+        _passwordEncrypter = passwordEncrypter;
         _tokenGenerator = tokenGenerator;
     }
     public async Task<ResponseRegisterUserDto> Execute(RequestRegisterUserDto request)
@@ -32,7 +32,7 @@ public class RegisterUserUseCase : IRegisterUserUseCase
         await Validate(request);
         
         var user = _mapper.Map<Domain.Entities.User>(request);
-        user.Password = _passwordEncripter.Encrypt(request.Password);
+        user.Password = _passwordEncrypter.Encrypt(request.Password);
 
         await _repository.Add(user);
         

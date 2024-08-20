@@ -50,6 +50,7 @@ public class RegisterUserUseCaseTest
     {
         // Arrange
         var request = RequestRegisterUserDtoBuilder.Build();
+        request.Email = "existent@email.com";
         var useCase = CreateUseCase(request.Email);
         
         // Act
@@ -64,7 +65,7 @@ public class RegisterUserUseCaseTest
     {
         var mapper = MapperBuilder.Build();
         var repository = new UsersRepositoryBuilder();
-        var passwordEncripter = PasswordEncripterBuilder.Build();
+        var passwordEncripter = new PasswordEncrypterBuilder();
         var accessTokenGenerator = JwtTokenGeneratorBuilder.Build();
 
         if (string.IsNullOrWhiteSpace(email) == false)
@@ -72,6 +73,6 @@ public class RegisterUserUseCaseTest
             repository.GetByEmail(email);
         }
         
-        return new RegisterUserUseCase(repository.Build(), mapper, passwordEncripter, accessTokenGenerator);
+        return new RegisterUserUseCase(repository.Build(), mapper, passwordEncripter.Build(), accessTokenGenerator);
     }
 } 

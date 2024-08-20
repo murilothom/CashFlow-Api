@@ -15,9 +15,17 @@
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9fc48902_002D87bb_002D42d9_002D980b_002De0e0db3bd057/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Error_Email_In_Use #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::38591E79-38D8-4271-8595-42DCBA6425DA::net8.0::UseCases.Test.User.Register.RegisterUserUseCaseTest.Error_Email_In_Use&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::38591E79-38D8-4271-8595-42DCBA6425DA::net8.0::UseCases.Test.User.Register.RegisterUserUseCaseTest&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::38591E79-38D8-4271-8595-42DCBA6425DA::net8.0::UseCases.Test.Login.LoginUseCaseTest.Success&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::38591E79-38D8-4271-8595-42DCBA6425DA::net8.0::UseCases.Test.Login.LoginUseCaseTest.Error_Wrong_Email&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::38591E79-38D8-4271-8595-42DCBA6425DA::net8.0::UseCases.Test.Login.LoginUseCaseTest&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+    &lt;ProjectFile&gt;26BEC858-9E93-489F-9AFB-E22FC3C7C48A/d:Expenses/d:Register/f:ExpenseValidatorTest.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;26BEC858-9E93-489F-9AFB-E22FC3C7C48A/d:Users/f:PasswordValidatorTest.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;26BEC858-9E93-489F-9AFB-E22FC3C7C48A/d:Users/d:Register/f:RegisterUserValidatorTest.cs&lt;/ProjectFile&gt;&#xD;
+  &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a37224c2_002D2eca_002D4932_002Dbdd6_002D4fe41464f060/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="RegisterExpenseValidatorTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;

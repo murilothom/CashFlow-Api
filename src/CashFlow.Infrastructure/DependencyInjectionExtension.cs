@@ -19,7 +19,7 @@ public static class DependencyInjectionExtension
         AddToken(services, configuration);
         AddRepositories(services);
         
-        services.AddScoped<IPasswordEncripter, Security.Cryptography.PasswordEncripter>();
+        services.AddScoped<IPasswordEncrypter, Security.Cryptography.PasswordEncrypter>();
     }
 
     private static void AddToken(IServiceCollection services, IConfiguration configuration)
