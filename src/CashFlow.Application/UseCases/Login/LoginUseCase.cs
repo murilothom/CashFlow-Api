@@ -26,7 +26,7 @@ public class LoginUseCase : ILoginUseCase
 
     public async Task<ResponseRegisterUserDto> Execute(RequestLoginDto request)
     {
-        var user = await _repository.getByEmail(request.Email);
+        var user = await _repository.GetByEmail(request.Email);
         if (user is null)
         {
             throw new UnauthorizedException(ResourceErrorMessages.LOGIN_FAILED);

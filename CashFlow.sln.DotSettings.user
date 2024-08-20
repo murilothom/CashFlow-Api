@@ -3,7 +3,23 @@
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
   &lt;Assembly Path="C:\Users\Murilo\.nuget\packages\fluentassertions\6.12.0\lib\net6.0\FluentAssertions.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a37224c2_002D2eca_002D4932_002Dbdd6_002D4fe41464f060/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="RegisterExpenseValidatorTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3debcaa1_002D84cd_002D420d_002Dbd96_002D9a4231330391/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Error_Email_In_Use #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::38591E79-38D8-4271-8595-42DCBA6425DA::net8.0::UseCases.Test.User.Register.RegisterUserUseCaseTest.Error_Email_In_Use&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9e74f83f_002D8b95_002D4f53_002Da22b_002Dc5fee74a85c3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Error_Email_In_Use" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::38591E79-38D8-4271-8595-42DCBA6425DA::net8.0::UseCases.Test.User.Register.RegisterUserUseCaseTest.Error_Email_In_Use&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::38591E79-38D8-4271-8595-42DCBA6425DA::net8.0::UseCases.Test.User.Register.RegisterUserUseCaseTest.Success&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9fc48902_002D87bb_002D42d9_002D980b_002De0e0db3bd057/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Error_Email_In_Use #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::38591E79-38D8-4271-8595-42DCBA6425DA::net8.0::UseCases.Test.User.Register.RegisterUserUseCaseTest.Error_Email_In_Use&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a37224c2_002D2eca_002D4932_002Dbdd6_002D4fe41464f060/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="RegisterExpenseValidatorTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::26BEC858-9E93-489F-9AFB-E22FC3C7C48A::net8.0::Validators.Test.Expenses.Register.ExpenseValidatorTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::26BEC858-9E93-489F-9AFB-E22FC3C7C48A::net8.0::Validators.Test.Users.Register.RegisterUserValidatorTest.Success&lt;/TestId&gt;&#xD;
@@ -13,6 +29,9 @@
     &lt;TestId&gt;xUnit::26BEC858-9E93-489F-9AFB-E22FC3C7C48A::net8.0::Validators.Test.Users.Register.RegisterUserValidatorTest.Error_Empty_Password&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::26BEC858-9E93-489F-9AFB-E22FC3C7C48A::net8.0::Validators.Test.Users.PasswordValidatorTest.Error_Invalid_Name&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::26BEC858-9E93-489F-9AFB-E22FC3C7C48A::net8.0::Validators.Test.Users.PasswordValidatorTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::38591E79-38D8-4271-8595-42DCBA6425DA::net8.0::UseCases.Test.User.Register.RegisterUserUseCaseTest.Success&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::38591E79-38D8-4271-8595-42DCBA6425DA::net8.0::UseCases.Test.User.Register.RegisterUserUseCaseTest.Error_Empty_Name&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::38591E79-38D8-4271-8595-42DCBA6425DA::net8.0::UseCases.Test.User.Register.RegisterUserUseCaseTest.Error_Email_In_Use&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=src_002FCashFlow_002EDomain_002FReports_002FResourceReportGenerationMessage/@EntryIndexedValue">True</s:Boolean>

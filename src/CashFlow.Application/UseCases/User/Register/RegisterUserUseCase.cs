@@ -58,7 +58,7 @@ public class RegisterUserUseCase : IRegisterUserUseCase
             throw new ErrorOnValidationException(errorMessages);
         }
 
-        var userExists = await _repository.getByEmail(request.Email);
+        var userExists = await _repository.GetByEmail(request.Email);
         if (userExists is not null)
         {
             throw new ConflictException(ResourceErrorMessages.EMAIL_IN_USE);
