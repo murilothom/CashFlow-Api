@@ -150,6 +150,15 @@ namespace CashFlow.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No permission..
+        /// </summary>
+        public static string NO_PERMISSION {
+            get {
+                return ResourceManager.GetString("NO_PERMISSION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The title is required..
         /// </summary>
         public static string TITLE_REQUIRED {

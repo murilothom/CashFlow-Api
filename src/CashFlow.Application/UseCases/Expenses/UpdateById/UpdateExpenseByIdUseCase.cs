@@ -3,6 +3,7 @@ using CashFlow.Communication.Requests;
 using CashFlow.Domain.Entities;
 using CashFlow.Domain.Repositories;
 using CashFlow.Domain.Repositories.Expenses;
+using CashFlow.Domain.Services.LoggedUser;
 using CashFlow.Exception;
 using CashFlow.Exception.ExceptionsBase;
 
@@ -12,19 +13,24 @@ public class UpdateExpenseByIdUseCase : IUpdateExpenseByIdUseCase
 {
     private readonly IExpensesRepository _repository;
     private readonly IMapper _mapper;
+    private readonly ILoggedUser _loggedUser;
     
     public UpdateExpenseByIdUseCase(
         IExpensesRepository repository,
-        IMapper mapper)
+        IMapper mapper,
+        ILoggedUser loggedUser)
     {
         _repository = repository;
         _mapper = mapper;
+        _loggedUser = loggedUser;
     }
     public async Task Execute(long id, RegisterExpenseDto request)
     {
         Validate(request);
         
-        var expense = await _repository.GetById(id);
+        var user = await _loggedUser.Get();
+        
+        var expense = await _repository.GetById(id, user.Id);
 
         if (expense is null)
         {

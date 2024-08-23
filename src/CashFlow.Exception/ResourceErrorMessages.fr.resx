@@ -54,4 +54,7 @@
     <data name="LOGIN_FAILED" xml:space="preserve">
         <value>Email ou mot de passe incorrect.</value>
     </data>
+    <data name="NO_PERMISSION" xml:space="preserve">
+        <value>Sans autorisation.</value>
+    </data>
 </root>

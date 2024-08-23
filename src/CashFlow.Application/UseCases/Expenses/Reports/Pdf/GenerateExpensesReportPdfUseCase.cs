@@ -4,6 +4,7 @@ using CashFlow.Application.UseCases.Expenses.Reports.Pdf.Fonts;
 using CashFlow.Domain.Extensions;
 using CashFlow.Domain.Reports;
 using CashFlow.Domain.Repositories.Expenses;
+using CashFlow.Domain.Services.LoggedUser;
 using MigraDoc.DocumentObjectModel;
 using MigraDoc.DocumentObjectModel.Tables;
 using MigraDoc.Rendering;
@@ -17,22 +18,28 @@ public class GenerateExpensesReportPdfUseCase : IGenerateExpensesReportPdfUseCas
     private const int ROW_HEIGHT = 25;
     
     private readonly IExpensesRepository _repository;
+    private readonly ILoggedUser _loggedUser;
 
-    public GenerateExpensesReportPdfUseCase(IExpensesRepository repository)
+    public GenerateExpensesReportPdfUseCase(
+        IExpensesRepository repository,
+        ILoggedUser loggedUser)
     {
         _repository = repository;
+        _loggedUser = loggedUser;
 
         GlobalFontSettings.FontResolver = new ExpensesReportFontResolver();
     }
 
     public async Task<byte[]> Execute(DateOnly month)
     {
-        var expenses = await _repository.FilterByMonth(month);
+        var user = await _loggedUser.Get();
 
-        var document = CreateDocument(month);
+        var expenses = await _repository.FilterByMonth(month, user.Id);
+
+        var document = CreateDocument(user.Name, month);
         var section = CreateSection(document);
 
-        CreateHeaderWithLogoAndName(section);
+        CreateHeaderWithLogoAndName(user.Name, section);
 
         var totalExpenses = expenses.Sum(expense => expense.Amount);
         CreateTotalExpenseSection(section, month, totalExpenses);
@@ -88,11 +95,11 @@ public class GenerateExpensesReportPdfUseCase : IGenerateExpensesReportPdfUseCas
         return RenderDocument(document);
     }
 
-    private Document CreateDocument(DateOnly month)
+    private Document CreateDocument(string name, DateOnly month)
     {
         var document = new Document();
         document.Info.Title = $"{ResourceReportGenerationMessage.EXPENSES_FOR} {month:Y}";
-        document.Info.Author = "Murilo Thom";
+        document.Info.Author = $"Hey, {name}";
 
         var style = document.Styles["Normal"];
         style!.Font.Name = FontHelper.RALEWAY_REGULAR;
@@ -114,7 +121,7 @@ public class GenerateExpensesReportPdfUseCase : IGenerateExpensesReportPdfUseCas
         return section;
     }
 
-    private void CreateHeaderWithLogoAndName(Section section)
+    private void CreateHeaderWithLogoAndName(string name, Section section)
     {
         var table = section.AddTable();
         table.AddColumn();
@@ -128,7 +135,7 @@ public class GenerateExpensesReportPdfUseCase : IGenerateExpensesReportPdfUseCas
 
         row.Cells[0].AddImage(pathFile);
 
-        row.Cells[1].AddParagraph("Hey, Murilo Thom");
+        row.Cells[1].AddParagraph($"Hey, {name}");
         row.Cells[1].Format.Font = new Font { Name = FontHelper.RALEWAY_BLACK, Size = 16 };
         row.Cells[1].VerticalAlignment = VerticalAlignment.Center;
     }
