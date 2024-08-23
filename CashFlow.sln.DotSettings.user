@@ -8,19 +8,29 @@
     &lt;TestId&gt;xUnit::38591E79-38D8-4271-8595-42DCBA6425DA::net8.0::UseCases.Test.User.Register.RegisterUserUseCaseTest.Error_Email_In_Use&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7a440a25_002D4b57_002D4ac2_002D8b1d_002Dfd832be4aa9c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Success" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::B1FE4467-1B7A-4E6C-A9E9-66EE363FB702::net8.0::WebApi.Test.Login.LoginTest.Success&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9e74f83f_002D8b95_002D4f53_002Da22b_002Dc5fee74a85c3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Error_Email_In_Use" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::38591E79-38D8-4271-8595-42DCBA6425DA::net8.0::UseCases.Test.User.Register.RegisterUserUseCaseTest.Error_Email_In_Use&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::38591E79-38D8-4271-8595-42DCBA6425DA::net8.0::UseCases.Test.User.Register.RegisterUserUseCaseTest.Success&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9fc48902_002D87bb_002D42d9_002D980b_002De0e0db3bd057/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Error_Email_In_Use #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9fc48902_002D87bb_002D42d9_002D980b_002De0e0db3bd057/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Error_Email_In_Use #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Or&gt;&#xD;
     &lt;TestAncestor&gt;&#xD;
       &lt;TestId&gt;xUnit::38591E79-38D8-4271-8595-42DCBA6425DA::net8.0::UseCases.Test.User.Register.RegisterUserUseCaseTest&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;xUnit::38591E79-38D8-4271-8595-42DCBA6425DA::net8.0::UseCases.Test.Login.LoginUseCaseTest.Success&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;xUnit::38591E79-38D8-4271-8595-42DCBA6425DA::net8.0::UseCases.Test.Login.LoginUseCaseTest.Error_Wrong_Email&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;xUnit::38591E79-38D8-4271-8595-42DCBA6425DA::net8.0::UseCases.Test.Login.LoginUseCaseTest&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::B1FE4467-1B7A-4E6C-A9E9-66EE363FB702::net8.0::WebApi.Test.Users.Register.RegisterUserTest.Success&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::B1FE4467-1B7A-4E6C-A9E9-66EE363FB702::net8.0::WebApi.Test.Users.Register.RegisterUserTest.Error_Empty_Name&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::B1FE4467-1B7A-4E6C-A9E9-66EE363FB702::net8.0::WebApi.Test.Users.Register.RegisterUserTest&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::B1FE4467-1B7A-4E6C-A9E9-66EE363FB702::net8.0::WebApi.Test.Login.LoginTest.Error_Login_Failed&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::B1FE4467-1B7A-4E6C-A9E9-66EE363FB702::net8.0::WebApi.Test.Login.LoginTest.Success&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
     &lt;ProjectFile&gt;26BEC858-9E93-489F-9AFB-E22FC3C7C48A/d:Expenses/d:Register/f:ExpenseValidatorTest.cs&lt;/ProjectFile&gt;&#xD;
     &lt;ProjectFile&gt;26BEC858-9E93-489F-9AFB-E22FC3C7C48A/d:Users/f:PasswordValidatorTest.cs&lt;/ProjectFile&gt;&#xD;
@@ -40,6 +50,11 @@
     &lt;TestId&gt;xUnit::38591E79-38D8-4271-8595-42DCBA6425DA::net8.0::UseCases.Test.User.Register.RegisterUserUseCaseTest.Success&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::38591E79-38D8-4271-8595-42DCBA6425DA::net8.0::UseCases.Test.User.Register.RegisterUserUseCaseTest.Error_Empty_Name&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::38591E79-38D8-4271-8595-42DCBA6425DA::net8.0::UseCases.Test.User.Register.RegisterUserUseCaseTest.Error_Email_In_Use&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fe1f4f6d_002D922d_002D4a90_002Db9c8_002De09cd52fde54/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Success #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::B1FE4467-1B7A-4E6C-A9E9-66EE363FB702::net8.0::WebApi.Test.Login.LoginTest.Success&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=src_002FCashFlow_002EDomain_002FReports_002FResourceReportGenerationMessage/@EntryIndexedValue">True</s:Boolean>
