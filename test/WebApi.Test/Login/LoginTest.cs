@@ -2,7 +2,6 @@ using System.Net;
 using System.Net.Http.Json;
 using System.Text.Json;
 using CashFlow.Communication.Requests;
-using CashFlow.Exception;
 using FluentAssertions;
 
 namespace WebApi.Test.Login;
