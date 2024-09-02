@@ -159,6 +159,24 @@ namespace CashFlow.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Das Passwort stimmt nicht überein..
+        /// </summary>
+        internal static string PASSWORD_DOES_NOT_MATCH {
+            get {
+                return ResourceManager.GetString("PASSWORD_DOES_NOT_MATCH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tag nicht gefunden..
+        /// </summary>
+        internal static string TAG_NOT_FOUND {
+            get {
+                return ResourceManager.GetString("TAG_NOT_FOUND", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Der Titel ist erforderlich..
         /// </summary>
         internal static string TITLE_REQUIRED {
@@ -173,15 +191,6 @@ namespace CashFlow.Exception {
         internal static string UNKNOWN_ERROR {
             get {
                 return ResourceManager.GetString("UNKNOWN_ERROR", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Das Passwort stimmt nicht überein..
-        /// </summary>
-        internal static string PASSWORD_DOES_NOT_MATCH {
-            get {
-                return ResourceManager.GetString("PASSWORD_DOES_NOT_MATCH", resourceCulture);
             }
         }
     }

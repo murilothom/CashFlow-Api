@@ -60,4 +60,7 @@
     <data name="PASSWORD_DOES_NOT_MATCH" xml:space="preserve">
         <value>Password does not match.</value>
     </data>
+    <data name="TAG_NOT_FOUND" xml:space="preserve">
+        <value>Tag not found.</value>
+    </data>
 </root>

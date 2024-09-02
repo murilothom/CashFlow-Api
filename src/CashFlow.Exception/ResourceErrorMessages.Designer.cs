@@ -183,6 +183,15 @@ namespace CashFlow.Exception {
             get {
                 return ResourceManager.GetString("PASSWORD_DOES_NOT_MATCH", resourceCulture);
             }
+        }        
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tag not found.
+        /// </summary>
+        public static string TAG_NOT_FOUND {
+            get {
+                return ResourceManager.GetString("TAG_NOT_FOUND", resourceCulture);
+            }
         }
     }
 }

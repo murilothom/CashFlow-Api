@@ -60,4 +60,7 @@
     <data name="PASSWORD_DOES_NOT_MATCH" xml:space="preserve">
         <value>A senha não corresponde</value>
     </data>
+    <data name="TAG_NOT_FOUND" xml:space="preserve">
+        <value>Tag não encontrada.</value>
+    </data>
 </root>

@@ -1,4 +1,5 @@
 ﻿using CashFlow.Communication.Enums;
+using CashFlow.Communication.Enums;
 
 namespace CashFlow.Communication.Requests;
 
@@ -9,4 +10,5 @@ public class RegisterExpenseDto
     public DateTime Date { get; set; }
     public decimal Amount { get; set; }
     public PaymentType PaymentType { get; set; }
+    public IList<Tag> Tags { get; set; } = [];
 }
