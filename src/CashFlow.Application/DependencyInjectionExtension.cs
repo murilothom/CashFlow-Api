@@ -10,6 +10,7 @@ using CashFlow.Application.UseCases.Login;
 using CashFlow.Application.UseCases.User.GetProfile;
 using CashFlow.Application.UseCases.User.Register;
 using CashFlow.Application.UseCases.User.Update;
+using CashFlow.Application.UseCases.User.UpdatePassword;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CashFlow.Application;
@@ -39,6 +40,7 @@ public static class DependencyInjectionExtension
         services.AddScoped<IRegisterUserUseCase, RegisterUserUseCase>();
         services.AddScoped<IGetUserProfileUseCase, GetUserProfileUseCase>();
         services.AddScoped<IUpdateUserUseCase, UpdateUserUseCase>();
+        services.AddScoped<IChangePasswordUseCase, ChangePasswordUseCase>();
         services.AddScoped<ILoginUseCase, LoginUseCase>();
     }
 }

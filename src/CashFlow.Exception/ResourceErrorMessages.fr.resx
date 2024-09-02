@@ -57,4 +57,7 @@
     <data name="NO_PERMISSION" xml:space="preserve">
         <value>Sans autorisation.</value>
     </data>
+    <data name="PASSWORD_DOES_NOT_MATCH" xml:space="preserve">
+        <value>Le mot de passe ne correspond pas.</value>
+    </data>
 </root>

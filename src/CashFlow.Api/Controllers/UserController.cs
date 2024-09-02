@@ -1,6 +1,7 @@
 using CashFlow.Application.UseCases.User.GetProfile;
 using CashFlow.Application.UseCases.User.Register;
 using CashFlow.Application.UseCases.User.Update;
+using CashFlow.Application.UseCases.User.UpdatePassword;
 using CashFlow.Communication.Requests;
 using CashFlow.Communication.Responses;
 using Microsoft.AspNetCore.Authorization;
@@ -37,9 +38,23 @@ namespace CashFlow.Api.Controllers
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(typeof(ResponseErrorDto), StatusCodes.Status400BadRequest)]
+        [Authorize]
         public async Task<IActionResult> UpdateProfile(
             [FromServices] IUpdateUserUseCase useCase,
             [FromBody] RequestUpdateUserDto request)
+        {
+            await useCase.Execute(request);
+
+            return NoContent();
+        }
+        
+        [HttpPut("password")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(ResponseErrorDto), StatusCodes.Status400BadRequest)]
+        [Authorize]
+        public async Task<IActionResult> ChangePassword(
+            [FromServices] IChangePasswordUseCase useCase,
+            [FromBody] RequestChangePasswordDto request)
         {
             await useCase.Execute(request);
 

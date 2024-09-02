@@ -175,5 +175,14 @@ namespace CashFlow.Exception {
                 return ResourceManager.GetString("UNKNOWN_ERROR", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password does not match.
+        /// </summary>
+        public static string PASSWORD_DOES_NOT_MATCH {
+            get {
+                return ResourceManager.GetString("PASSWORD_DOES_NOT_MATCH", resourceCulture);
+            }
+        }
     }
 }

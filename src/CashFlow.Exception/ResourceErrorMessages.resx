@@ -57,4 +57,7 @@
     <data name="NO_PERMISSION" xml:space="preserve">
         <value>No permission.</value>
     </data>
+    <data name="PASSWORD_DOES_NOT_MATCH" xml:space="preserve">
+        <value>Password does not match.</value>
+    </data>
 </root>
