@@ -40,4 +40,11 @@ internal class UsersRepository : IUsersRepository
         _dbContext.Users.Update(user);
         await _dbContext.SaveChangesAsync();
     }
+    
+    public async Task Delete(User user)
+    {
+        var userToDelete = await _dbContext.Users.FindAsync(user.Id);
+        _dbContext.Users.Remove(userToDelete!);
+        await _dbContext.SaveChangesAsync();
+    }
 }
