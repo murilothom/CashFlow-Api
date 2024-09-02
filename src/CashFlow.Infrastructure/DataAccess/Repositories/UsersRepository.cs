@@ -27,4 +27,17 @@ internal class UsersRepository : IUsersRepository
 
         return user;
     }
+
+    public Task<User> GetById(Guid id)
+    {
+        var user = _dbContext.Users.FirstAsync(user => user.Id.Equals(id));
+
+        return user;
+    }
+
+    public async Task Update(User user)
+    {
+        _dbContext.Users.Update(user);
+        await _dbContext.SaveChangesAsync();
+    }
 }

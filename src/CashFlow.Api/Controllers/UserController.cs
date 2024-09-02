@@ -1,5 +1,6 @@
 using CashFlow.Application.UseCases.User.GetProfile;
 using CashFlow.Application.UseCases.User.Register;
+using CashFlow.Application.UseCases.User.Update;
 using CashFlow.Communication.Requests;
 using CashFlow.Communication.Responses;
 using Microsoft.AspNetCore.Authorization;
@@ -31,6 +32,18 @@ namespace CashFlow.Api.Controllers
             var response = await useCase.Execute();
 
             return Ok(response);
+        }
+
+        [HttpPut]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(ResponseErrorDto), StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> UpdateProfile(
+            [FromServices] IUpdateUserUseCase useCase,
+            [FromBody] RequestUpdateUserDto request)
+        {
+            await useCase.Execute(request);
+
+            return NoContent();
         }
     }
 }
